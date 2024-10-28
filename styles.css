@@ -4,33 +4,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #121212;
+    color: #f0f0f0;
 }
 
 .container {
     text-align: center;
-    background: white;
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
 }
 
 input {
     padding: 10px;
     margin-bottom: 10px;
     width: 200px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-p {
-    margin-top: 20px;
-    font-size: 20px;
-    color: green;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #f0f0f0;
 }
 
 button {
@@ -38,4 +31,50 @@ button {
     font-size: 16px;
     cursor: pointer;
     margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6200ea;
+    color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+#peopleList {
+    list-style: none;
+    padding: 0;
+}
+
+#peopleList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    color: #f0f0f0;
+}
+
+.remove-button {
+    background-color: #e53935;
+    color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: #b71c1c;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #03dac6;
 }

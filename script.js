@@ -4,6 +4,15 @@ document.getElementById('addButton').addEventListener('click', function() {
     if (name) {
         const li = document.createElement('li');
         li.textContent = name;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.classList.add('remove-button');
+        removeButton.addEventListener('click', function() {
+            li.remove(); 
+        });
+
+        li.appendChild(removeButton);
         document.getElementById('peopleList').appendChild(li);
         nameInput.value = '';
     } else {
@@ -18,7 +27,7 @@ document.getElementById('drawButton').addEventListener('click', function() {
         return;
     }
     const randomIndex = Math.floor(Math.random() * people.length);
-    const luckyPerson = people[randomIndex].textContent;
+    const luckyPerson = people[randomIndex].textContent.replace('Remove', '').trim();
 
     document.getElementById('result').textContent = `CONGRATULATIONS, ${luckyPerson}, YOU ARE THE LUCKY ONE!`;
 });
